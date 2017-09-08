@@ -89,3 +89,5 @@ export default function start(port, sshuser, sshhost, sshport, sshauth, sslopts)
   });
   return events;
 }
+
+module.exports = start;
