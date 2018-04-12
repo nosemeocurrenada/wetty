@@ -8,11 +8,11 @@ export function proposeGeometry({ element, renderer }) {
   return {
     cols: Math.floor(
       Math.max(0, parseInt(parentElementStyle.getPropertyValue('width'), 10)) /
-        renderer.dimensions.actualCellWidth,
+        renderer.dimensions.actualCellWidth
     ),
     rows: Math.floor(
       parseInt(parentElementStyle.getPropertyValue('height'), 10) /
-        renderer.dimensions.actualCellHeight,
+        renderer.dimensions.actualCellHeight
     ),
   };
 }
