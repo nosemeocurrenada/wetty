@@ -1,10 +1,17 @@
 module.exports = {
   env: {
-    es6 : true,
-    node: true,
+    es6    : true,
+    browser: true,
+  },
+  globals: {
+    hterm: true,
+    lib  : true,
+    io   : true,
   },
   extends: ['airbnb'],
   rules  : {
+    'no-underscore-dangle': 0,
+    'class-methods-use-this': 0,
     'linebreak-style'     : ['error', 'unix'],
     'arrow-parens'        : ['error', 'as-needed'],
     'no-param-reassign'   : ['error', { props: false }],
@@ -16,12 +23,6 @@ module.exports = {
         builtinGlobals: true,
         hoist         : 'functions',
         allow         : ['resolve', 'reject', 'err'],
-      },
-    ],
-    'no-console': [
-      'error',
-      {
-        allow: ['warn', 'trace', 'log', 'error'],
       },
     ],
     'consistent-return': 0,
